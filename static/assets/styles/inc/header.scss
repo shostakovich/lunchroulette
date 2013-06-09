@@ -4,13 +4,22 @@
 	}
 
 .logo-wrap {
-	padding: em(8) 0;
+	padding: em(4) 0;
 	margin: 0 em(40);
 	}
 
 .logo {
+	display: inline-block;
 	font-size: em(14);
-	color: $color-white;
-	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-	line-height: 1;
+
+	&:link,
+	&:visited {
+		color: $color-white;
+		text-decoration: none;
+		}
+
+	span {
+		white-space: pre-line;
+		}
+
 	}

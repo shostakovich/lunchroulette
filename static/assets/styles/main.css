@@ -426,19 +426,36 @@ textarea {
 }
 
 .btn {
+  display: inline-block;
   padding: 0.5em 0.9375em;
   line-height: 0.9375;
   border: none;
   -webkit-appearance: none;
-  background-color: #cc311d;
-  color: white;
+  background-color: #a2a2a2;
+  color: #0d0302;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  text-align: center;
   -webkit-transition: background-color 0.3s ease-in-out;
   -moz-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+}
 .btn:hover, .btn:focus {
+  background-color: #888888;
+}
+.btn.btn-action {
+  background-color: #cc311d;
+  color: white;
+}
+.btn.btn-action:hover, .btn.btn-action:focus {
   background-color: #e34d39;
+}
+.btn.btn-large {
+  padding-top: 0.6875em;
+  padding-bottom: 0.6875em;
+  font-size: 1.5em;
 }
 
 .form-row {
@@ -536,15 +553,20 @@ a:focus {
 }
 
 .logo-wrap {
-  padding: 0.5em 0;
+  padding: 0.25em 0;
   margin: 0 2.5em;
 }
 
 .logo {
+  display: inline-block;
   font-size: 0.875em;
+}
+.logo:link, .logo:visited {
   color: white;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  line-height: 1;
+  text-decoration: none;
+}
+.logo span {
+  white-space: pre-line;
 }
 
 .main-content {
@@ -571,6 +593,14 @@ a:focus {
 }
 .sign-up-form .btn {
   margin-top: 0.625em;
+}
+
+.welcome-btns {
+  margin: 0 0.625em;
+}
+.welcome-btns .btn {
+  display: block;
+  margin: 0 auto 0.41667em auto;
 }
 
 /* ==========================================================================

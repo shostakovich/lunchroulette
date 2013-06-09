@@ -1,0 +1,35 @@
+<h1 class="main-headline align-center">Melde dich an!</h1>
+
+<form class="sign-up-form" data-ng-submit="submitForm()" name="SignUpForm" data-ng-model="SignUpModel">
+    <div class="alert error" data-ng-show="formError" data-ng-init="formError=false">Bitte die markierten Felder ausfüllen.</div>
+    <fieldset>
+        <div class="form-row">
+            <input
+                type="email"
+                name="email"
+                placeholder="Email-Adresse"
+                required
+                data-ng-pattern="/^.*@.*\..*$/"
+                data-ng-model="email">
+        </div>
+        <div class="form-row">
+            <input
+                type="password"
+                name="password"
+                placeholder="Passwort"
+                required
+                data-ng-model="password">
+        </div>
+        <div class="form-row">
+            <input
+                type="password"
+                name="confirm"
+                placeholder="Passwort bestätigen"
+                required
+                data-ng-model="confirm">
+        </div>
+        <div class="form-row">
+                <button type="submit" class="btn btn-action">Anmelden</button>
+        </div>
+    </fieldset>
+</form>
