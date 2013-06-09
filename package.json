@@ -1,0 +1,25 @@
+{
+  "name": "lunchroulette",
+  "version": "0.0.0",
+  "description": "Bringing people together for lunch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shostakovich/lunchroulette.git"
+  },
+  "keywords": [
+    "lunch",
+    "roulette"
+  ],
+  "author": "shostakovich & herschel666",
+  "license": "All rights reserved",
+  "gitHead": "cf433dc3825848823bec7737b47ffdb3688be881",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4"
+  }
+}

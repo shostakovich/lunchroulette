@@ -1,0 +1,15 @@
+.sign-up-form {
+	padding: 0 em(10);
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		@include box-sizing(border-box);
+		width: 100%;
+		}
+
+	.btn {
+		margin-top: em(10);
+		}
+
+	}

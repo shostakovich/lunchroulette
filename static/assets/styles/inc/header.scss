@@ -1,0 +1,16 @@
+.main-header {
+	min-height: em(36);
+	background-color: $color-black;
+	}
+
+.logo-wrap {
+	padding: em(8) 0;
+	margin: 0 em(40);
+	}
+
+.logo {
+	font-size: em(14);
+	color: $color-white;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	line-height: 1;
+	}
