@@ -13,6 +13,9 @@
 					templateUrl: 'assets/templates/sign-up.html',
 					controller: 'SignUpCtrl'
 				})
+				.when('/thank-you', {
+					templateUrl: 'assets/templates/thank-you.html'
+				})
 				.when('/log-in', {
 					templateUrl: 'assets/templates/log-in.html',
 					controller: 'LoginCtrl'

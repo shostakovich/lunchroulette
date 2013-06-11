@@ -1,6 +1,7 @@
 @import 'inc/bourbon/bourbon';
 
-@import 'inc/normalize',
+@import 'inc/lunchroulette',
+		'inc/normalize',
         'inc/mobile-h5-pt1';
 
 @import 'inc/variables',
@@ -11,7 +12,8 @@
         'inc/header',
         'inc/content';
 
-@import 'inc/sign-up-form',
-		'inc/welcome';
+@import 'inc/welcome',
+		'inc/profile-page',
+		'inc/result-page';
 
 @import 'inc/mobile-h5-pt2';

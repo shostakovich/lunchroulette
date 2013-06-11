@@ -1,11 +1,25 @@
 .main-header {
-	min-height: em(36);
+	height: em(46);
 	background-color: $color-black;
+	border-bottom: em(4) solid $main-red;
+	}
+
+.main-header-inner {
+	float: left;
+	width: 40%;
+	min-height: 2px;
+	}
+
+.main-header-center {
+	width: 20%;
+	}
+
+.main-header-right {
+	float: right;
 	}
 
 .logo-wrap {
 	padding: em(4) 0;
-	margin: 0 em(40);
 	}
 
 .logo {
@@ -20,6 +34,45 @@
 
 	span {
 		white-space: pre-line;
+		}
+
+	}
+
+.header-link {
+	display: inline-block;
+	padding: 0 em(8, 18);
+	font-size: em(18);
+	line-height: #{(46/18)};
+	@include transition(color .3s ease-in-out);
+
+	.align-right & {
+		border-left: 1px solid darken($color-white, 60%);
+		}
+
+	.align-left & {
+		border-right: 1px solid darken($color-white, 60%);
+		}
+
+	&.header-link-back {
+		padding-right: em(11, 18);
+		}
+
+	&.header-link-imprint {
+		padding-left: em(9, 18);
+		}
+
+	&.header-link-profile {
+		padding-left: em(12, 18);
+		}
+
+	&:link,
+	&:visited {
+		color: darken($color-white, 40%);
+		}
+
+	&:hover,
+	&:focus {
+		color: $color-white;
 		}
 
 	}

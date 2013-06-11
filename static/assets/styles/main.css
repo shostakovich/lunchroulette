@@ -1,3 +1,86 @@
+@font-face {
+  font-family: 'lunchroulette';
+  src: url("../font/lunchroulette.eot?55139335");
+  src: url("../font/lunchroulette.eot?55139335#iefix") format("embedded-opentype"), url("../font/lunchroulette.woff?55139335") format("woff"), url("../font/lunchroulette.ttf?55139335") format("truetype"), url("../font/lunchroulette.svg?55139335#lunchroulette") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'lunchroulette';
+    src: url('../font/lunchroulette.svg?55139335#lunchroulette') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "lunchroulette";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-left-open:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-right-open:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-info:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-comment:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-plus:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-power:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-user:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-clock:before {
+  content: '\e808';
+}
+
+/* '' */
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -431,8 +514,8 @@ textarea {
   line-height: 0.9375;
   border: none;
   -webkit-appearance: none;
-  background-color: #a2a2a2;
-  color: #0d0302;
+  background-color: #0d0302;
+  color: white;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   text-align: center;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -440,22 +523,40 @@ textarea {
   transition: background-color 0.3s ease-in-out;
 }
 .btn, .btn:link, .btn:visited {
+  color: white;
   text-decoration: none;
 }
 .btn:hover, .btn:focus {
-  background-color: #888888;
+  background-color: #230805;
 }
 .btn.btn-action {
   background-color: #cc311d;
-  color: white;
 }
 .btn.btn-action:hover, .btn.btn-action:focus {
   background-color: #e34d39;
+}
+.btn.btn-icon {
+  text-indent: -em(5);
 }
 .btn.btn-large {
   padding-top: 0.6875em;
   padding-bottom: 0.6875em;
   font-size: 1.5em;
+}
+
+.form {
+  padding: 0 0.625em;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.form .btn-action {
+  margin-top: 0.625em;
 }
 
 .form-row {
@@ -467,7 +568,7 @@ input[type="email"],
 input[type="password"],
 textarea {
   padding: 0.4375em 0.3125em 0.25em 0.3125em;
-  color: #cccccc;
+  color: #aaaaaa;
   border: 1px solid #999999;
   line-height: 0.9375;
   -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -484,7 +585,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-  color: gray;
+  color: #5d5d5d;
   border-color: #4d4d4d;
   box-shadow: 0 0 0.375em #e34d39;
   outline: none;
@@ -548,13 +649,27 @@ a:focus {
 }
 
 .main-header {
-  min-height: 2.25em;
+  height: 2.875em;
   background-color: #0d0302;
+  border-bottom: 0.25em solid #cc311d;
+}
+
+.main-header-inner {
+  float: left;
+  width: 40%;
+  min-height: 2px;
+}
+
+.main-header-center {
+  width: 20%;
+}
+
+.main-header-right {
+  float: right;
 }
 
 .logo-wrap {
   padding: 0.25em 0;
-  margin: 0 2.5em;
 }
 
 .logo {
@@ -569,6 +684,37 @@ a:focus {
   white-space: pre-line;
 }
 
+.header-link {
+  display: inline-block;
+  padding: 0 0.44444em;
+  font-size: 1.125em;
+  line-height: 2.55556;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.align-right .header-link {
+  border-left: 1px solid #666666;
+}
+.align-left .header-link {
+  border-right: 1px solid #666666;
+}
+.header-link.header-link-back {
+  padding-right: 0.61111em;
+}
+.header-link.header-link-imprint {
+  padding-left: 0.5em;
+}
+.header-link.header-link-profile {
+  padding-left: 0.66667em;
+}
+.header-link:link, .header-link:visited {
+  color: #999999;
+}
+.header-link:hover, .header-link:focus {
+  color: white;
+}
+
 .main-content {
   padding: 1.25em 0;
 }
@@ -580,27 +726,66 @@ a:focus {
   line-height: 1.125;
 }
 
-.sign-up-form {
-  padding: 0 0.625em;
-}
-.sign-up-form input[type="text"],
-.sign-up-form input[type="email"],
-.sign-up-form input[type="password"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-}
-.sign-up-form .btn {
-  margin-top: 0.625em;
-}
-
 .welcome-btns {
   margin: 0 0.625em;
 }
 .welcome-btns .btn {
   display: block;
   margin: 0 auto 0.41667em auto;
+}
+
+/*
+ * Profile Page
+**/
+.g-map {
+  border: 3px solid #999999;
+}
+
+/*
+ * Result-Page
+**/
+.result-page .main-content {
+  padding-top: 0;
+}
+
+.user-tabs {
+  padding: 1px 0;
+  background-color: #444444;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(100%, #0d0302));
+  background-image: -webkit-linear-gradient(#444444, #0d0302);
+  background-image: linear-gradient(#444444, #0d0302);
+}
+
+.user-tab {
+  display: inline-block;
+  padding: 0.4375em;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  -moz-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}
+.user-tab.current {
+  background-color: #888888;
+}
+.user-tab.current img {
+  opacity: 1;
+  box-shadow: none;
+}
+.user-tab img {
+  cursor: pointer;
+  opacity: .7;
+  box-shadow: 0 0 10px #0d0302;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.user-tab img:hover {
+  opacity: 1;
+}
+
+.user-caption {
+  line-height: 1.75em;
+  background-color: #888888;
+  color: white;
 }
 
 /* ==========================================================================

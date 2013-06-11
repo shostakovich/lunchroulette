@@ -4,8 +4,8 @@
     line-height: #{(15/16)};
     border: none;
     -webkit-appearance: none;
-    background-color: lighten($color-grey, 10%);
-    color: $color-black;
+    background-color: $color-black;
+    color: $color-white;
     text-shadow: 0 1px 1px rgba(0,0,0,.4);
     text-align: center;
     @include transition (background-color .3s ease-in-out);
@@ -13,23 +13,27 @@
     &,
     &:link,
     &:visited {
+        color: $color-white;
         text-decoration: none;
         }
 
     &:hover,
     &:focus {
-        background-color: $color-grey;
+        background-color: lighten($color-black, 5%);
         }
 
     &.btn-action {
         background-color: $main-red;
-        color: $color-white;
 
         &:hover,
         &:focus {
             background-color: lighten($main-red, 10%);
             }
 
+        }
+
+    &.btn-icon {
+        text-indent: -em(5);
         }
 
     &.btn-large {
