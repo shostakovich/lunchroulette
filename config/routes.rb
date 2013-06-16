@@ -1,7 +1,7 @@
 Lunchroulette::Application.routes.draw do
-  get "home/index"
+  resources :users
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  get "home/index"
 
   root :to => "home#index"
 end
