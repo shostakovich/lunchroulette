@@ -11,5 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
+//= require_tree ./vendor
 //= require_tree .
+//= require_tree ./controller
+//= require_tree ./plugins
+

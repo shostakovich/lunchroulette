@@ -2,13 +2,57 @@
 <html>
 <head>
   <title>Lunchroulette</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+
+</head>
+<body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html lang="de" class="no-js iem7" data-ng-app="lunchroulette"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html lang="de" class="no-js" data-ng-app="lunchroulette"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
   <%= csrf_meta_tags %>
+
+  <title>Lunchroulette</title>
+  <script>
+      (function (d,c) {
+          d[c] = d[c].replace('no-js', 'js');
+      })(document.documentElement, 'className');
+  </script>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
+
+
+  <%= stylesheet_link_tag "application" %>
 </head>
 <body>
 
-<%= yield %>
+<div class="wrap">
 
+  <header class="main-header clearfix">
+    <div class="main-header-inner main-header-left"></div>
+    <div class="main-header-inner main-header-center logo-wrap align-center">
+      <a href="#/" class="logo">Lunch-<br>Roulette</a>
+    </div>
+    <nav class="main-header-inner main-header-right align-right">
+      <a href="#/impressum" class="header-link header-link-imprint">
+        <i class="icon-info" aria-hidden="true"></i>
+      </a>
+    </nav>
+  </header>
+
+  <section class="main-content" data-ng-view></section>
+
+</div>
+
+<%= javascript_include_tag "application" %>
 </body>
 </html>
