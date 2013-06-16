@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html lang="de" class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html lang="de" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Lunchroulette</title>
+        <script>
+            (function (d,c) {
+                d[c] = d[c].replace('no-js', 'js');
+            })(document.documentElement, 'className');
+        </script>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="stylesheet" href="assets/styles/main.css">
+    </head>
+<body class="result-page">
+
+    <div class="wrap">
+
+        <header class="main-header clearfix">
+            <div class="main-header-inner main-header-left align-left">
+                <a href="#" class="header-link header-link-back">
+                    <i class="icon-left-open" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="main-header-inner main-header-center logo-wrap align-center">
+                <a href="#/" class="logo">Lunch-<br>Roulette</a>
+            </div>
+            <nav class="main-header-inner main-header-right align-right">
+                <a href="#/impressum" class="header-link header-link-profile">
+                    <i class="icon-user" aria-hidden="true"></i>
+                </a>
+                <a href="#/impressum" class="header-link header-link-imprint">
+                    <i class="icon-info" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </header>
+
+        <section class="main-content">
+
+            <div class="user-tabs align-center" id="user-tabs">
+                <div class="user-tab current" data-name="Hans Mustermann">
+                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                </div>
+                <div class="user-tab" data-name="Klaus Musterfrau">
+                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                </div>
+                <div class="user-tab" data-name="Rosa Schlüpfer">
+                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                </div>
+                <div class="user-tab" data-name="Horst Horstmann">
+                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                </div>
+            </div>
+            <div class="user-caption align-center" id="user-caption">Hans Mustermann</div>
+
+            <ol class="user-comments">
+                <li class="user-comment">
+                    <h2 class="author-name">Klaus</h2>
+                    <span class="commment-date">11. Juni 2013, 12:30 Uhr</span>
+                    <p class="comment-body">Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li class="user-comment">
+                    <h2 class="author-name">Rosa</h2>
+                    <span class="commment-date">11. Juni 2013, 12:37 Uhr</span>
+                    <p class="comment-body">Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li class="user-comment">
+                    <h2 class="author-name">Horst</h2>
+                    <span class="commment-date">11. Juni 2013, 12:48 Uhr</span>
+                    <p class="comment-body">Lorem ipsum dolor sit amet.</p>
+                </li>
+            </ol>
+
+        </section>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                var $caption = $('#user-caption');
+                $('#user-tabs').on('click', '.user-tab', function () {
+                    $(this)
+                        .addClass('current')
+                        .siblings()
+                        .removeClass('current');
+                    $caption.text(this.dataset.name);
+                });
+            });
+        })(jQuery);
+    </script>
+
+</body>
+</html>
