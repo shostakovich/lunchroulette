@@ -1,0 +1,30 @@
+<h1 class="main-headline align-center">Log dich ein!</h1>
+
+<form class="form" data-ng-submit="submitForm()" name="LogInForm">
+    <div class="alert error" data-ng-show="formError" data-ng-init="formError=false">Bitte die markierten Felder ausfüllen.</div>
+    <fieldset>
+        <div class="form-row">
+            <input
+                type="email"
+                name="email"
+                placeholder="Email-Adresse"
+                required
+                data-ng-pattern="/^.*@.*\..*$/"
+                data-ng-model="email">
+        </div>
+        <div class="form-row">
+            <input
+                type="password"
+                name="password"
+                placeholder="Passwort"
+                required
+                data-ng-model="password">
+        </div>
+        <div class="form-row">
+            <button type="submit" class="btn btn-action">
+                Einloggen
+                <i class="icon-right-open" aria-hidden="true"></i>
+            </button>
+        </div>
+    </fieldset>
+</form>
