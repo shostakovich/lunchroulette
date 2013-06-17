@@ -11,7 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require_tree ./vendor
+//= require angular
+//= require angular-resource
 //= require_tree .
 //= require_tree ./controller
 //= require_tree ./plugins

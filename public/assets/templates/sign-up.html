@@ -1,6 +1,6 @@
 <h1 class="main-headline align-center">Melde dich an!</h1>
 
-<form class="form" data-ng-submit="submitForm()" name="SignUpForm" data-ng-model="SignUpModel">
+<form class="form" data-ng-submit="addUser()" name="SignUpForm" data-ng-model="newUser">
     <div class="alert error"
          data-ng-show="formError"
          data-ng-init="formError=false">Bitte die markierten Felder ausfüllen.</div>
@@ -12,7 +12,7 @@
                 placeholder="Email-Adresse"
                 required
                 data-ng-pattern="/^.*@.*\..*$/"
-                data-ng-model="email">
+                ng-model="newUser.email">
         </div>
         <div class="form-row">
             <input
@@ -20,7 +20,7 @@
                 name="password"
                 placeholder="Passwort"
                 required
-                data-ng-model="password">
+                data-ng-model="newUser.password">
         </div>
         <div class="form-row">
             <input
@@ -28,7 +28,7 @@
                 name="confirmation"
                 placeholder="Passwort bestätigen"
                 required
-                data-ng-model="confirm">
+                data-ng-model="newUser.password_confirmation">
         </div>
         <div class="form-row">
             <button type="submit" class="btn btn-action">Anmelden
