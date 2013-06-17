@@ -4,4 +4,10 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation
 
   validates_uniqueness_of :email
+
+  def self.register(params)
+    user = create!(params)
+    UserMailer.confirm_account(user).deliver
+    user
+  end
 end

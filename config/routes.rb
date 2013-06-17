@@ -1,5 +1,7 @@
 Lunchroulette::Application.routes.draw do
-  resources :users
+  resources :users do
+    get 'confirm', :on => :member
+  end
 
   get "home/index"
 
