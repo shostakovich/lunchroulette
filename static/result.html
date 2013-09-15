@@ -43,19 +43,32 @@
 
             <div class="user-tabs align-center" id="user-tabs">
                 <div class="user-tab current" data-name="Hans Mustermann">
-                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                    <img src="userfiles/cat.jpg" alt="" width="50" height="50">
                 </div>
                 <div class="user-tab" data-name="Klaus Musterfrau">
-                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                    <img src="userfiles/cat.jpg" alt="" width="50" height="50">
                 </div>
                 <div class="user-tab" data-name="Rosa Schlüpfer">
-                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                    <img src="userfiles/cat.jpg" alt="" width="50" height="50">
                 </div>
                 <div class="user-tab" data-name="Horst Horstmann">
-                    <img src="http://placekitten.com/g/50/50" alt="" width="50" height="50">
+                    <img src="userfiles/cat.jpg" alt="" width="50" height="50">
                 </div>
             </div>
             <div class="user-caption align-center" id="user-caption">Hans Mustermann</div>
+
+            <form class="form result-comment-form">
+                <fieldset class="clearfix">
+                    <div class="result-comment-right align-right">
+                        <button type="submit" class="btn">
+                            <i class="icon-clock"></i>
+                        </button>
+                    </div>
+                    <div class="result-comment-left">
+                        <textarea name="result-comment-textarea" id="result-comment-textarea" cols="20" rows="1" placeholder="Dein Kommentar &hellip;" class="result-comment-textarea textarea"></textarea>
+                    </div>
+                </fieldset>
+            </form>
 
             <ol class="user-comments">
                 <li class="user-comment">
@@ -79,7 +92,7 @@
 
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-1.10.1.min.js"></script>
     <script>
         (function ($) {
             $(function () {

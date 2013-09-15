@@ -749,43 +749,72 @@ a:focus {
 }
 
 .user-tabs {
-  padding: 1px 0;
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(100%, #0d0302));
-  background-image: -webkit-linear-gradient(#444444, #0d0302);
-  background-image: linear-gradient(#444444, #0d0302);
+  padding: 0.125em 0;
+  margin: 0.0625em 0;
+  background-color: #a7645b;
 }
 
 .user-tab {
+  position: relative;
   display: inline-block;
   padding: 0.4375em;
-  -webkit-transition: background-color 0.4s ease-in-out;
-  -moz-transition: background-color 0.4s ease-in-out;
-  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .user-tab.current {
-  background-color: #888888;
+  padding-bottom: 0.625em;
+  margin-bottom: -0.1875em;
+  background-color: #6f6f6f;
 }
 .user-tab.current img {
   opacity: 1;
   box-shadow: none;
 }
+.user-tab:after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 0.4375em;
+  right: 0.4375em;
+  bottom: 0.4375em;
+  left: 0.4375em;
+  box-shadow: inset 0 0 10px #0d0302;
+}
 .user-tab img {
-  cursor: pointer;
   opacity: .7;
-  box-shadow: 0 0 10px #0d0302;
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-.user-tab img:hover {
+.user-tab:hover img {
   opacity: 1;
 }
 
 .user-caption {
+  margin-bottom: 0.625em;
   line-height: 1.75em;
-  background-color: #888888;
+  background-color: #6f6f6f;
   color: white;
+}
+
+.result-comment-left {
+  width: 100%;
+  float: left;
+  padding-right: 4.375em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.result-comment-textarea {
+  width: 100%;
+  resize: none;
+}
+
+.result-comment-right {
+  float: none;
 }
 
 /* ==========================================================================
