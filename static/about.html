@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>About | Lunchroulette</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- ionic css -->
+    <link href="css/ionic.min.css" rel="stylesheet">
+
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="ionic-body">
+      <div class="bar bar-header lr-header" id="lr-header">
+        <ul class="list lr-nav">
+          <li class="item lr-anchor" data-href="/">Home</li>
+          <li class="item lr-anchor" data-href="/about.html">About</li>
+          <li class="item lr-anchor">Disclaimer</li>
+        </ul>
+        <span class="button button-icon icon ion-arrow-left-b lr-anchor"
+          role="button"
+          tabindex="0"
+          data-href="/start-default.html"></span>
+        <div class="title lr-logo">
+          <img src="img/logo.png" alt="Lunchroulette" width="33" height="33">
+        </div>
+        <span class="button button-icon icon ion-navicon"
+          role="button"
+          tabindex="0"
+          id="lr-nav-toggle"></span>
+      </div>
+
+      <div class="content has-header padding">
+        <h2 class="h2">About Lunchroulette</h2>
+        <p>Bacon ipsum dolor sit amet landjaeger tri-tip venison beef ribs, ball tip kielbasa drumstick biltong pork loin tongue chicken filet mignon shank strip steak. Tongue filet mignon prosciutto shank ground round, corned beef tail flank strip steak sausage pancetta short ribs ribeye turkey biltong. Capicola bacon sausage bresaola t-bone spare ribs sirloin pancetta filet mignon venison tri-tip chicken biltong turducken. Venison pastrami turkey ham hock, short ribs jowl beef bacon pork salami hamburger boudin. Spare ribs strip steak salami tenderloin short ribs fatback. Ham hock hamburger cow ball tip tri-tip kevin jowl.</p>
+
+        <p>Filet mignon ball tip boudin, cow chicken capicola shoulder. Hamburger chicken shankle swine jerky kevin, tenderloin biltong boudin brisket jowl sirloin meatloaf. Salami capicola ground round doner ball tip swine beef ribs meatball turducken andouille short loin jowl brisket bacon. Bacon short ribs kevin, swine kielbasa ball tip pork loin sirloin. Jerky ham hock ribeye t-bone ham meatball beef prosciutto meatloaf boudin.</p>
+      </div>
+    </div>
+
+    <script>
+      var lrHeader = document.getElementById('lr-header');
+      
+      document.getElementById('lr-nav-toggle').addEventListener('touchend', function () {
+        lrHeader.classList.toggle('is-show-nav');
+      }, false);
+      Array.prototype.forEach.call(document.querySelectorAll('.lr-anchor'), function (elem) {
+        elem.addEventListener('touchend', function (evnt) {
+          location.href = evnt.target.dataset.href || location.href;
+        }, false);
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Start (Pending) | Lunchroulette</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- ionic css -->
+    <link href="css/ionic.min.css" rel="stylesheet">
+
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="ionic-body">
+      <div class="bar bar-header lr-header" id="lr-header">
+        <ul class="list lr-nav">
+          <li class="item lr-anchor" data-href="/">Home</li>
+          <li class="item lr-anchor" data-href="/settings.html">Settings</li>
+          <li class="item lr-anchor">Disclaimer</li>
+        </ul>
+        <span class="button button-icon icon ion-arrow-left-b lr-anchor"
+          role="button"
+          tabindex="0"
+          data-href="/start-default.html"></span>
+        <div class="title lr-logo">
+          <img src="img/logo.png" alt="Lunchroulette" width="33" height="33">
+        </div>
+        <span class="button button-icon icon ion-navicon"
+          role="button"
+          tabindex="0"
+          id="lr-nav-toggle"></span>
+      </div>
+
+      <div class="content has-header padding">
+        <div class="text-center">
+          <h2 class="h2">The Lunchroulette is spinning &hellip;</h2>
+          <img src="img/logo.png" alt="Lunchroulette" width="100" height="100">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var lrHeader = document.getElementById('lr-header');
+      
+      document.getElementById('lr-nav-toggle').addEventListener('touchend', function () {
+        lrHeader.classList.toggle('is-show-nav');
+      }, false);
+      Array.prototype.forEach.call(document.querySelectorAll('.lr-anchor'), function (elem) {
+        elem.addEventListener('touchend', function (evnt) {
+          location.href = evnt.target.dataset.href || location.href;
+        }, false);
+      });
+    </script>
+
+  </body>
+</html>

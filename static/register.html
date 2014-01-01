@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register | Lunchroulette</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- ionic css -->
+    <link href="css/ionic.min.css" rel="stylesheet">
+
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="ionic-body">
+      <div class="bar bar-header lr-header" id="lr-header">
+        <ul class="list lr-nav">
+          <li class="item lr-anchor" data-href="/">Home</li>
+          <li class="item lr-anchor" data-href="/about.html">About</li>
+          <li class="item lr-anchor">Disclaimer</li>
+        </ul>
+        <span class="button button-icon icon ion-arrow-left-b lr-anchor"
+          role="button"
+          tabindex="0"
+          data-href="/login.html"></span>
+        <div class="title lr-logo">
+          <img src="img/logo.png" alt="Lunchroulette" width="33" height="33">
+        </div>
+        <span class="button button-icon icon ion-navicon lr-nav-toggle"
+          role="button"
+          tabindex="0"
+          id="lr-nav-toggle"></span>
+      </div>
+
+      <div class="content has-header padding">
+        <h2 class="h2">Register</h2>
+        <p>Enter your preferred Username, your email address and a password. Confirm your password and submit the form to register at Lunchroulette.</p>
+        <div class="lr-message lr-message--error">The username is already taken.</div>
+        <form action="#" class="lr-form" method="post" autocomplete="off" autocorrect="off">
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Username">
+            </label>
+            <label class="item item-input">
+              <input type="email" placeholder="Email address">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Password">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="Confirm Password">
+            </label>
+          </div>
+          <span class="button button-block button-positive" role="button" tabindex="0">Register</span>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var lrHeader = document.getElementById('lr-header');
+      
+      document.getElementById('lr-nav-toggle').addEventListener('touchstart', function () {
+        lrHeader.classList.toggle('is-show-nav');
+      }, false);
+
+      Array.prototype.forEach.call(document.querySelectorAll('.lr-anchor'), function (elem) {
+        elem.addEventListener('touchend', function (evnt) {
+          location.href = evnt.target.dataset.href || location.href;
+        }, false);
+      });
+    </script>
+
+  </body>
+</html>

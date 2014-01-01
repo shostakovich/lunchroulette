@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]>    <html lang="de" class="no-js iem7" data-ng-app="lunchroulette"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html lang="de" class="no-js" data-ng-app="lunchroulette"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <title>Lunchroulette</title>
-        <script>
-            (function (d,c) {
-                d[c] = d[c].replace('no-js', 'js');
-            })(document.documentElement, 'className');
-        </script>
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="cleartype" content="on">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lunchroulette</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <link rel="stylesheet" href="assets/styles/main.css">
-    </head>
-<body>
+    <!-- ionic css -->
+    <link href="css/ionic.min.css" rel="stylesheet">
 
-    <div class="wrap">
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
 
-        <header class="main-header clearfix">
-            <div class="main-header-inner main-header-left"></div>
-            <div class="main-header-inner main-header-center logo-wrap align-center">
-                <a href="#/" class="logo">Lunch-<br>Roulette</a>
-            </div>
-            <nav class="main-header-inner main-header-right align-right">
-                <a href="#/impressum" class="header-link header-link-imprint">
-                    <i class="icon-info" aria-hidden="true"></i>
-                </a>
-            </nav>
-        </header>
+  </head>
 
-        <section class="main-content" data-ng-view></section>
+  <body>
 
+    <div class="ionic-body">
+      <div class="bar bar-header lr-header">
+        <div class="title lr-logo">
+          <img src="img/logo.png" alt="Lunchroulette" width="33" height="33">
+        </div>
+        <span class="button button-icon icon ion-log-in lr-anchor"
+          role="button"
+          tabindex="0"
+          data-href="/login.html"></span>
+      </div>
+
+      <div class="content has-header padding">
+        <h2 class="h2">Welcome to Lunchroulette</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
     </div>
 
-    <script src="assets/vendor/angular-1.1.4.min.js"></script>
-    <script src="assets/scripts/app.js"></script>
-    <script src="assets/scripts/constants.js"></script>
+    <script>
+      Array.prototype.forEach.call(document.querySelectorAll('.lr-anchor'), function (elem) {
+        elem.addEventListener('touchend', function (evnt) {
+          location.href = evnt.target.dataset.href || location.href;
+        }, false);
+      });
+    </script>
 
-    <!-- Controller -->
-    <script src="assets/scripts/controller/signup.js"></script>
-    <script src="assets/scripts/controller/login.js"></script>
-
-</body>
+  </body>
 </html>

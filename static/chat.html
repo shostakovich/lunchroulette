@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat | Lunchroulette</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- ionic css -->
+    <link href="css/ionic.min.css" rel="stylesheet">
+
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="ionic-body">
+      <div class="bar bar-header lr-header" id="lr-header">
+        <ul class="list lr-nav">
+          <li class="item lr-anchor" data-href="/">Home</li>
+          <li class="item lr-anchor" data-href="/settings.html">Settings</li>
+          <li class="item lr-anchor">Disclaimer</li>
+        </ul>
+        <span class="button button-icon icon ion-arrow-left-b lr-anchor"
+          role="button"
+          tabindex="0"
+          data-href="/start-result.html"></span>
+        <div class="title lr-logo">
+          <img src="img/logo.png" alt="Lunchroulette" width="33" height="33">
+        </div>
+        <span class="button button-icon icon ion-navicon"
+          role="button"
+          tabindex="0"
+          id="lr-nav-toggle"></span>
+      </div>
+
+      <div class="content has-header has-header">
+        <ul class="list card">
+          <li class="item row lr-userlist__item">
+            <div class="col col-80 lr-userlist__caption">
+              <span>Atze</span>
+            </div>
+            <div class="col col-20 text-right">
+              <img src="http://placekitten.com/g/24/24" alt="" width="24" height="24">
+            </div>
+          </li>
+          <li class="item row lr-userlist__item">
+            <div class="col col-80 lr-userlist__caption">
+              <span>Uschi</span>
+            </div>
+            <div class="col col-20 text-right">
+              <img src="http://placekitten.com/g/24/24" alt="" width="24" height="24">
+            </div>
+          </li>
+        </ul>
+        <div class="lr-chat padding">
+          <div class="lr-chat__item">
+            <p><strong>Uschi sagt:</strong> Lorem ipsum dolor sit amet.</p>
+            <small class="lr-chat__time">vor zwei Sekunden</small>
+          </div>
+          <div class="lr-chat__item">
+            <p><strong>Atze sagt:</strong> Lorem ipsum dolor sit amet.</p>
+            <small class="lr-chat__time">vor zehn Minuten</small>
+          </div>
+          <div class="lr-chat__item">
+            <p><strong>Uschi sagt:</strong> Lorem ipsum dolor sit amet.</p>
+            <small class="lr-chat__time">vor 15 Minuten</small>
+          </div>
+        </div>
+    </div>
+
+    <footer class="bar bar-footer">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="Enter message and hit return" class="lr-footer__input">
+      </label>
+    </footer>
+
+    <script>
+      var lrHeader = document.getElementById('lr-header');
+      
+      document.getElementById('lr-nav-toggle').addEventListener('touchend', function () {
+        lrHeader.classList.toggle('is-show-nav');
+      }, false);
+      Array.prototype.forEach.call(document.querySelectorAll('.lr-anchor'), function (elem) {
+        elem.addEventListener('touchend', function (evnt) {
+          location.href = evnt.target.dataset.href || location.href;
+        }, false);
+      });
+    </script>
+
+  </body>
+</html>
