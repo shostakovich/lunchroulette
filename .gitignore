@@ -1,3 +1,5 @@
+.DS_STORE
+
 # Ignore bundler config
 /.bundle
 /.idea
@@ -7,3 +9,31 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+### Bower ###
+vendor/assets/javascripts
+
+
+### Node ###
+lib-cov
+lcov.info
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+build
+.grunt
+
+node_modules
+
+
+### SASS ###
+### Sass Ignores - "Sassy CSS" http://sass-lang.com/
+*.sass-cache

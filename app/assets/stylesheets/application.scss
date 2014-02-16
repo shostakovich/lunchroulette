@@ -11,8 +11,5 @@
  *#= require_self
  */
 
-@import 'inc/bourbon/bourbon';
-@import 'inc/lunchroulette', 'inc/normalize', 'inc/mobile-h5-pt1';
-@import 'inc/variables', 'inc/buttons', 'inc/forms', 'inc/alerts', 'inc/general', 'inc/header', 'inc/content';
-@import 'inc/welcome', 'inc/profile-page', 'inc/result-page';
-@import 'inc/mobile-h5-pt2';
+@import 'external/bourbon/bourbon',
+        'ionic/ionic';

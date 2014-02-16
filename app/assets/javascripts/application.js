@@ -11,9 +11,13 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require angular
-//= require angular-resource
+//= require ionic/release/js/ionic.js
+//= require angular/angular.js
+//= require angular-sanitize/angular-sanitize.js
+//= require angular-animate/angular-animate.js
+//= require angular-ui-router/release/angular-ui-router.js
+//= require ionic/release/js/ionic-angular.js
 //= require_tree .
 //= require_tree ./controller
-//= require_tree ./plugins
+//= require_tree ./factory
 

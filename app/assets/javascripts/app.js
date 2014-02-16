@@ -1,27 +1,21 @@
-(function (angular) {
+angular.module('lunchroulette', ['ionic'])
 
-	'use strict';
+  .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    angular.module('lunchroulette', [])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: 'assets/templates/welcome.html'
-            })
-            .when('/sign-up', {
-                templateUrl: 'assets/templates/sign-up.html',
-                controller: 'SignUpCtrl'
-            })
-            .when('/thank-you', {
-                templateUrl: 'assets/templates/thank-you.html'
-            })
-            .when('/log-in', {
-                templateUrl: 'assets/templates/log-in.html',
-                controller: 'LoginCtrl'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
-    }]);
+    $stateProvider
 
-})(angular);
+      .state('index', {
+        url: '/',
+        templateUrl: 'assets/templates/index.html',
+        controller: 'IndexCtrl'
+      })
+
+      .state('login', {
+        url: '/login',
+        templateUrl: 'assets/templates/login.html',
+        // controller: 'LoginCtrl'
+      });
+
+    $urlRouterProvider.otherwise('/');
+
+}]);
